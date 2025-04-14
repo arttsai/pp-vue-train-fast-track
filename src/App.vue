@@ -1,17 +1,17 @@
 <template>
   <div class="container p-4">
     <h1 class="title is-4 has-text-centered">Hello Vue!</h1>
-    <VoteItem v-bind="item" />
+    <div v-for="item in voteItems" class="p-4">
+      <VoteItem v-bind="item" />
+    </div>
   </div>
 </template>
 
 <script setup>
 import VoteItem from './components/VoteItem.vue';
 import { ref } from 'vue';
-const item = ref({
-  imageUrl: '/399-100x100.jpg',
-  name: 'John',
-  description: 'fdsafdfas',
-  votes: 25
-})
+import voteList from './data/votes.js'
+voteList.sort((a, b) => b.votes - a.votes)
+const voteItems = ref(voteList)
+
 </script>
