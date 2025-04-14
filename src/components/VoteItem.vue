@@ -1,7 +1,7 @@
 <template>
     <div class="card columns ">
         <div class="is-one-third image is-64x64 m-4">
-            <img :src="image" alt="Placeholder image">
+            <img :src="imageUrl" alt="Placeholder image">
         </div>
         <div class="card-content column">
             <div class="media">
@@ -21,7 +21,7 @@
 
 <script setup>
 const props = defineProps({
-    image: {
+    imageUrl: {
         type: String,
         required: true
     },
