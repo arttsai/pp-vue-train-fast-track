@@ -12,7 +12,10 @@
                     </p>
                 </div>
                 <div class="media-right">
-                    ^ <span class="tag is-info is-large">{{ votes }}</span>
+                    ^ <span class="tag is-info mr-4">{{ votes }}</span>
+                    <button class="button is-small" @click="voteUp">
+                        <i class="fas fa-thumbs-up"></i>
+                    </button>
                 </div>
             </div>
         </div>
@@ -38,6 +41,10 @@ const props = defineProps({
         required: true
     }
 })
+
+const voteUp = () => {
+    props.votes++
+}
 
 console.log(props)
 </script>
