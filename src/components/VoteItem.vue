@@ -1,20 +1,43 @@
 <template>
     <div class="card columns ">
         <div class="is-one-third image is-64x64 m-4">
-            <img src="/399-100x100.jpg" alt="Placeholder image">
+            <img :src="image" alt="Placeholder image">
         </div>
         <div class="card-content column">
             <div class="media">
                 <div class="media-content m-4">
-                    <span class="title is-4">John Smith</span>
+                    <span class="title is-4">{{ name }}</span>
                     <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident, cumque!
+                        {{ description }}
                     </p>
                 </div>
                 <div class="media-right">
-                    ^ 18
+                    ^ <span class="tag is-info is-large">{{ votes }}</span>
                 </div>
             </div>
         </div>
     </div>
 </template>
+
+<script setup>
+const props = defineProps({
+    image: {
+        type: String,
+        required: true
+    },
+    name: {
+        type: String,
+        required: true
+    },
+    description: {
+        type: String,
+        required: true
+    },
+    votes: {
+        type: Number,
+        required: true
+    }
+})
+
+console.log(props)
+</script>
