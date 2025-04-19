@@ -2,7 +2,7 @@
   <div class="container p-4">
     <h1 class="title is-4 has-text-centered">Hello Vue!</h1>
     <div v-for="item in voteItems" class="p-4">
-      <VoteItem v-bind="item" />
+      <VoteItem :item="item" />
     </div>
   </div>
 </template>
