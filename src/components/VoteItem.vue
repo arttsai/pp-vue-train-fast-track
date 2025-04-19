@@ -1,6 +1,6 @@
 <template>
-    <div class="card columns ">
-        <div class="is-one-third image is-64x64 m-4">
+    <div class="card columns" :class="{ 'has-background-info': indexZero }">
+        <div class=" is-one-third image is-64x64 m-4">
             <img :src="item.imageUrl" alt="Placeholder image">
         </div>
         <div class="card-content column">
@@ -23,9 +23,16 @@
 </template>
 
 <script setup>
+import { computed } from 'vue'
+import { defineProps } from 'vue'
+
 const props = defineProps({
     item: {
         type: Object,
+        required: true
+    },
+    index: {
+        type: Number,
         required: true
     }
 })
@@ -33,6 +40,10 @@ const props = defineProps({
 const voteUp = () => {
     props.item.votes++
 }
+
+const indexZero = computed(() => {
+    return props.index === 0
+})
 
 console.log(props)
 </script>
