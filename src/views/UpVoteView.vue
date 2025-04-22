@@ -14,9 +14,10 @@
 </template>
 
 <script setup>
-import VoteItem from './components/VoteItem.vue';
+import VoteItem from '@/components/VoteItem.vue';
+import voteList from '@/data/votes.js'
+
 import { computed, ref } from 'vue';
-import voteList from './data/votes.js'
 voteList.sort((a, b) => b.votes - a.votes)
 const voteItems = ref(voteList)
 const sortedItems = computed(() => {
