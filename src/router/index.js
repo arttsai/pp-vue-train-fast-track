@@ -1,7 +1,6 @@
 import { createWebHistory, createRouter } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import AboutView from '../views/AboutView.vue'
-import { meta } from 'eslint-plugin-vue'
 
 const routes = [
   {
@@ -33,6 +32,12 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(),
   routes,
+})
+
+const DEFAULT_TITLE = 'Vue 高手直達車'
+router.beforeEach((to, from, next) => {
+  document.title = to.meta.title ? `${to.meta.title} | ${DEFAULT_TITLE}` : DEFAULT_TITLE
+  next()
 })
 
 export default router
