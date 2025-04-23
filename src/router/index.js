@@ -36,6 +36,23 @@ const routes = [
       title: '產品',
     },
   },
+  {
+    path: '/products',
+    name: 'productlist',
+    component: () => import('@/views/ProductListView.vue'),
+    meta: {
+      title: '產品列表',
+    },
+    children: [
+      {
+        path: ':id',
+        name: 'product',
+        component: () => import('@/views/ProductItemView.vue'),
+        meta: { title: 'Product Detail' },
+        props: true,
+      },
+    ],
+  },
 ]
 
 const router = createRouter({
