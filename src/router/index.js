@@ -27,6 +27,14 @@ const routes = [
       title: 'Blog 投票',
     },
   },
+  {
+    path: '/product',
+    name: 'product',
+    component: () => import('@/views/ProductItemView.vue'),
+    meta: {
+      title: '產品',
+    },
+  },
 ]
 
 const router = createRouter({
