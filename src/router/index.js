@@ -28,9 +28,10 @@ const routes = [
     },
   },
   {
-    path: '/product',
+    path: '/products/:id',
     name: 'product',
     component: () => import('@/views/ProductItemView.vue'),
+    props: true,
     meta: {
       title: '產品',
     },

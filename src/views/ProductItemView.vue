@@ -28,6 +28,10 @@
 
 <script setup>
 import products from '@/data/foods'
-const product = products[0]
+
+const props = defineProps({
+    id: String
+})
+const product = products[props.id]
 
 </script>
