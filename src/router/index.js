@@ -27,15 +27,15 @@ const routes = [
       title: 'Blog 投票',
     },
   },
-  {
-    path: '/products/:id',
-    name: 'product',
-    component: () => import('@/views/ProductItemView.vue'),
-    props: true,
-    meta: {
-      title: '產品',
-    },
-  },
+  // {
+  //   path: '/products/:id',
+  //   name: 'product',
+  //   component: () => import('@/views/ProductItemView.vue'),
+  //   props: true,
+  //   meta: {
+  //     title: '產品',
+  //   },
+  // },
   {
     path: '/products',
     name: 'productlist',

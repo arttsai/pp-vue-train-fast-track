@@ -28,10 +28,18 @@
 
 <script setup>
 import products from '@/data/foods'
+import { computed } from 'vue'
 
 const props = defineProps({
     id: String
 })
-const product = products[props.id]
+
+const product = computed(() => {
+    const product = products.find(product => product.id == props.id)
+    if (!product) {
+        throw new Error('Product not found')
+    }
+    return product
+})
 
 </script>
