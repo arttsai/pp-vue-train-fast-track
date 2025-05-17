@@ -45,6 +45,14 @@ const routes = [
     },
     children: [
       {
+        path: '',
+        component: () => import('@/views/ProductNoneView.vue'),
+        name: 'productnone',
+        meta: {
+          title: '產品列表',
+        },
+      },
+      {
         path: ':id',
         name: 'product',
         component: () => import('@/views/ProductItemView.vue'),
