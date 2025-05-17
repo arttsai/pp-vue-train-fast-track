@@ -62,6 +62,12 @@ const routes = [
       },
     ],
   },
+  {
+    path: '/tabs',
+    name: 'tabs',
+    component: () => import('../views/TabsView.vue'),
+    meta: { title: 'Tabs Page' },
+  },
 ]
 
 const router = createRouter({
