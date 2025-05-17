@@ -68,6 +68,11 @@ const routes = [
     component: () => import('../views/TabsView.vue'),
     meta: { title: 'Tabs Page' },
   },
+  {
+    path: '/:pathMatch(.*)*',
+    name: 'NotFound',
+    component: () => import('@/views/NotFoundView.vue'),
+  },
 ]
 
 const router = createRouter({
