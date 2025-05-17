@@ -5,6 +5,7 @@ import AboutView from '../views/AboutView.vue'
 const routes = [
   {
     path: '/',
+    alias: '/home',
     name: 'home',
     component: HomeView,
     meta: {
