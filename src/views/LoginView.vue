@@ -16,6 +16,7 @@ const login = () => {
     userStore.login(1)
 
     console.log('userId', userStore.userId)
+    console.log('userName', userStore.userName)
     console.log('isLogin', userStore.isLogin)
 }
 

@@ -47,7 +47,32 @@
             </div>
 
             <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <RouterLink v-if="!isLogin" to="/login" class="button is-primary is-small">
+                            <strong>登入</strong>
+                        </RouterLink>
+                        <div v-else class="is-flex is-align-items-center">
+                            <div class="mr-2">{{ userName }}</div>
+                            <button class="button is-info is-small" @click="logout">登出</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
 </template>
+
+<script setup>
+import { useUserStore } from '@/stores/user.js'
+import { storeToRefs } from 'pinia'
+const userStore = useUserStore()
+
+// 這一列敍述是錯的, 這個 isLogin 沒有響應能力, 下一節再修
+const isLogin = userStore.isLogin
+
+const logout = () => {
+    userStore.logout()
+}
+
+</script>
