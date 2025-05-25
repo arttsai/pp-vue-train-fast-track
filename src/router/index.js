@@ -1,8 +1,8 @@
 import { createWebHistory, createRouter } from 'vue-router'
+import { useUserStore } from '@/stores/user'
+
 import HomeView from '../views/HomeView.vue'
 import AboutView from '../views/AboutView.vue'
-
-import { useUserStore } from '@/stores/user'
 
 const routes = [
   {
