@@ -66,13 +66,18 @@
 <script setup>
 import { useUserStore } from '@/stores/user.js'
 import { storeToRefs } from 'pinia'
+import { useRouter } from 'vue-router'
+
 const userStore = useUserStore()
+const router = useRouter()
 
 // 這一列敍述是錯的, 這個 isLogin 沒有響應能力, 下一節再修
 const { userName, isLogin } = storeToRefs(userStore)
 
 const logout = () => {
     userStore.logout()
+    router.push('/')
+
 }
 
 </script>

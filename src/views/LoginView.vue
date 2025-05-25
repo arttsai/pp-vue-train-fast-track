@@ -23,6 +23,12 @@ const login = () => {
     console.log('userId', userStore.userId)
     console.log('userName', userStore.userName)
     console.log('isLogin', userStore.isLogin)
+
+    if (route.query.redirect) {
+        router.push(route.query.redirect)
+    } else {
+        router.push('/')
+    }
 }
 
 </script>
