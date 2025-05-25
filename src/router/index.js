@@ -2,6 +2,8 @@ import { createWebHistory, createRouter } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import AboutView from '../views/AboutView.vue'
 
+import { useUserStore } from '@/stores/user'
+
 const routes = [
   {
     path: '/',
@@ -43,6 +45,12 @@ const routes = [
     component: () => import('@/views/ProductListView.vue'),
     meta: {
       title: '產品列表',
+    },
+    beforeEnter: (to, from) => {
+      const userStore = useUserStore()
+      if (!userStore.isLogin) {
+        return { name: 'login', query: { redirect: to.fullPath } }
+      }
     },
     children: [
       {

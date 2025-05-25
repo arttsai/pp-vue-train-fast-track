@@ -9,8 +9,13 @@
 
 <script setup>
 import { useUserStore } from '@/stores/user.js'
+import { useRoute, useRouter } from 'vue-router'
 
 const userStore = useUserStore()
+const route = useRoute()
+const router = useRouter()
+
+console.log('route', route)
 
 const login = () => {
     userStore.login(1)
