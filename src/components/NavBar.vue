@@ -69,7 +69,7 @@ import { storeToRefs } from 'pinia'
 const userStore = useUserStore()
 
 // 這一列敍述是錯的, 這個 isLogin 沒有響應能力, 下一節再修
-const isLogin = userStore.isLogin
+const { userName, isLogin } = storeToRefs(userStore)
 
 const logout = () => {
     userStore.logout()
