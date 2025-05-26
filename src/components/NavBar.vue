@@ -38,6 +38,10 @@
                         <RouterLink to="/tabs" class="navbar-item">
                             頁籤功能 (動態元件)
                         </RouterLink>
+
+                        <RouterLink to="/tap" class="navbar-item">
+                            Tap 功能 (Component 通訊)
+                        </RouterLink>
                     </div>
                 </div>
 
