@@ -5,7 +5,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { useTapScoreStore } from '@/stores/tapScore'
 
 const props = defineProps({
     id: {
@@ -14,12 +14,9 @@ const props = defineProps({
     }
 })
 
-const emit = defineEmits(['strike'])
-
-console.log('props', props)
-
+const tapScoreStore = useTapScoreStore()
 const strike = () => {
-    console.log('strike', props.id)
-    emit('strike', { id: props.id, datetime: new Date() })
+    tapScoreStore.incrementScore(props.id)
 }
+
 </script>

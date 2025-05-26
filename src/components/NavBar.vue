@@ -40,7 +40,7 @@
                         </RouterLink>
 
                         <RouterLink to="/tap" class="navbar-item">
-                            Tap 功能 (Component 通訊)
+                            Tap 功能 (slot, emit)
                         </RouterLink>
                     </div>
                 </div>
