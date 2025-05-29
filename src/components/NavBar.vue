@@ -43,7 +43,10 @@
                             Tap 功能 (slot, emit)
                         </RouterLink>
                         <RouterLink to="/promise" class="navbar-item">
-                            Promise 功能 (Promise, async/await)
+                            Promise 功能
+                        </RouterLink>
+                        <RouterLink to="/apidemo" class="navbar-item">
+                            API 功能 (Axios)
                         </RouterLink>
                     </div>
                 </div>

@@ -95,6 +95,12 @@ const routes = [
     meta: { title: 'Promise 示範' },
   },
   {
+    path: '/apidemo',
+    name: 'apidemo',
+    component: () => import('@/views/ApiDemoView.vue'),
+    meta: { title: 'API 示範' },
+  },
+  {
     path: '/:pathMatch(.*)*',
     name: 'NotFound',
     component: () => import('@/views/NotFoundView.vue'),
