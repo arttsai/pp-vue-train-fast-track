@@ -42,6 +42,9 @@
                         <RouterLink to="/tap" class="navbar-item">
                             Tap 功能 (slot, emit)
                         </RouterLink>
+                        <RouterLink to="/promise" class="navbar-item">
+                            Promise 功能 (Promise, async/await)
+                        </RouterLink>
                     </div>
                 </div>
 
