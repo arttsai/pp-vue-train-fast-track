@@ -1,7 +1,7 @@
 <template>
     <div>
         <!-- (todo) http get -->
-        <h1 class="title is-3 has-text-centered">API 呼叫練習 (axios)</h1>
+        <h1 class="title is-3 has-text-centered">API 呼叫練習 (axios, async)</h1>
         <div class="block box container is-max-desktop">
             <h2 class="subtitle is-4">Http Get (todo)</h2>
             <div>
@@ -50,51 +50,46 @@ import axios from 'axios';
 const id = ref(1)
 const getData = ref('')
 
-const getMethod = () => {
-    axios.get(`https://jsonplaceholder.typicode.com/todos/${id.value}`)
-        .then((response) => {
-            console.log("Data fetched successfully, response:", response);
-            getData.value = response.data;
-        })
-        .catch((error) => {
-            // console.error("Error fetching data:", error);
-            getData.value = `Error fetching data
+const getMethod = async () => {
+    try {
+        const response = await axios.get(`https://jsonplaceholder.typicode.com/todos/${id.value}`);
+        console.log("Data fetched successfully, response:", response);
+        getData.value = response.data;
+    } catch (error) {
+        console.error("Error fetching data:", error);
+        getData.value = `Error fetching data
             ${error.message}`;
-        });
+    }
 }
 
 const postData = ref('')
 const postMethod = async () => {
-    axios.post('https://jsonplaceholder.typicode.com/todos', {
-        id: 201,
-        userId: 1,
-        title: 'New Todo',
-        completed: false,
-    })
-        .then((response) => {
-            console.log("Data posted successfully, response:", response);
-            postData.value = response.data;
-        })
-        .catch((error) => {
-            // console.error("Error posting data:", error);
-            postData.value = `Error posting data
-            ${error.message}`;
+    try {
+        const response = await axios.post('https://jsonplaceholder.typicode.com/todos', {
+            userId: 1,
+            title: 'New Todo',
+            completed: false,
         });
+        console.log("Data posted successfully, response:", response);
+        postData.value = response.data;
+    } catch (error) {
+        // console.error("Error posting data:", error);
+        postData.value = `Error posting data
+            ${error.message}`;
+    }
 }
 
 const deleteData = ref('')
 const deleteMethod = async () => {
-    axios.delete(`https://jsonplaceholder.typicode.com/todos/${id.value}`)
-        .then((response) => {
-            console.log("Data deleted successfully, response:", response);
-            deleteData.value = `Todo with ID ${id.value} deleted successfully.`;
-        })
-        .catch((error) => {
-            // console.error("Error deleting data:", error);
-            deleteData.value = `Error deleting data
+    try {
+        const response = await axios.delete(`https://jsonplaceholder.typicode.com/todos/${id.value}`);
+        console.log("Data deleted successfully, response:", response);
+        deleteData.value = `Todo with ID ${id.value} deleted successfully.`;
+    } catch (error) {
+        // console.error("Error deleting data:", error);
+        deleteData.value = `Error deleting data
             ${error.message}`;
-        });
+    }
 }
-
 
 </script>
