@@ -50,7 +50,7 @@ import axios from 'axios';
 const id = ref(1)
 const getData = ref('')
 
-const getMethod = async () => {
+const getMethod = () => {
     axios.get(`https://jsonplaceholder.typicode.com/todos/${id.value}`)
         .then((response) => {
             console.log("Data fetched successfully, response:", response);

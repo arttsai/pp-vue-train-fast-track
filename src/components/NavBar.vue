@@ -48,6 +48,9 @@
                         <RouterLink to="/apidemo" class="navbar-item">
                             API 功能 (Axios)
                         </RouterLink>
+                        <RouterLink to="/async" class="navbar-item">
+                            Async/Await 功能
+                        </RouterLink>
                     </div>
                 </div>
 

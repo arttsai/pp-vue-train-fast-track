@@ -101,6 +101,12 @@ const routes = [
     meta: { title: 'API 示範' },
   },
   {
+    path: '/async',
+    name: 'async',
+    component: () => import('@/views/AsyncView.vue'),
+    meta: { title: 'Async/Await 示範' },
+  },
+  {
     path: '/:pathMatch(.*)*',
     name: 'NotFound',
     component: () => import('@/views/NotFoundView.vue'),
