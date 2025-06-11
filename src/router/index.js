@@ -107,6 +107,12 @@ const routes = [
     meta: { title: 'Async/Await 示範' },
   },
   {
+    path: '/transition',
+    name: 'transition',
+    component: () => import('@/views/TransitionView.vue'),
+    meta: { title: 'Transition 動畫' },
+  },
+  {
     path: '/:pathMatch(.*)*',
     name: 'NotFound',
     component: () => import('@/views/NotFoundView.vue'),

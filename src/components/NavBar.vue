@@ -51,6 +51,9 @@
                         <RouterLink to="/async" class="navbar-item">
                             Async/Await 功能
                         </RouterLink>
+                        <RouterLink to="/transition" class="navbar-item">
+                            轉場效果 (Transition)
+                        </RouterLink>
                     </div>
                 </div>
 
