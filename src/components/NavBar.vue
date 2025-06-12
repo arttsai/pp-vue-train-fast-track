@@ -57,6 +57,9 @@
                         <RouterLink to="/watch" class="navbar-item">
                             Watch 功能 (watch, watchEffect)
                         </RouterLink>
+                        <RouterLink to="/composables" class="navbar-item">
+                            Composables 功能 (組合式函數)
+                        </RouterLink>
                     </div>
                 </div>
 

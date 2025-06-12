@@ -119,6 +119,12 @@ const routes = [
     meta: { title: 'Watch 示範' },
   },
   {
+    path: '/composables',
+    name: 'composables',
+    component: () => import('@/views/ComposablesView.vue'),
+    meta: { title: 'Composables 示範' },
+  },
+  {
     path: '/:pathMatch(.*)*',
     name: 'NotFound',
     component: () => import('@/views/NotFoundView.vue'),
