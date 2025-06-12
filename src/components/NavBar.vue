@@ -54,6 +54,9 @@
                         <RouterLink to="/transition" class="navbar-item">
                             轉場效果 (Transition)
                         </RouterLink>
+                        <RouterLink to="/watch" class="navbar-item">
+                            Watch 功能 (watch, watchEffect)
+                        </RouterLink>
                     </div>
                 </div>
 

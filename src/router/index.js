@@ -113,6 +113,12 @@ const routes = [
     meta: { title: 'Transition 動畫' },
   },
   {
+    path: '/watch',
+    name: 'watch',
+    component: () => import('@/views/WatchView.vue'),
+    meta: { title: 'Watch 示範' },
+  },
+  {
     path: '/:pathMatch(.*)*',
     name: 'NotFound',
     component: () => import('@/views/NotFoundView.vue'),
