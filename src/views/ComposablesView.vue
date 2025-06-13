@@ -18,6 +18,7 @@
             </div>
             <div class="box">
                 <pre>{{ userInfo }}</pre>
+                <pre>{{ userInfoError }}</pre>
             </div>
         </div>
     </div>
@@ -27,11 +28,14 @@
 
 import { ref, watch, watchEffect } from 'vue';
 import axios from 'axios';
+import { useFetchUserInfo } from '@/composables/userInfo'
 
 const todoId = ref('');
 const todoInfo = ref('');
 const userId = ref('');
-const userInfo = ref('');
+
+const { data: userInfo, error: userInfoError } = useFetchUserInfo(userId);
+
 
 const clear = () => {
     todoId.value = '';
@@ -54,9 +58,5 @@ const search = async () => {
         todoInfo.value = `錯誤: ${error.message}`;
     }
 };
-
-
-
-
 
 </script>
