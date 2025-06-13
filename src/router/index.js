@@ -131,6 +131,12 @@ const routes = [
     meta: { title: 'Modal 示範 (對話窗)' },
   },
   {
+    path: '/video',
+    name: 'video',
+    component: () => import('@/views/VideoView.vue'),
+    meta: { title: 'Video 播放器' },
+  },
+  {
     path: '/:pathMatch(.*)*',
     name: 'NotFound',
     component: () => import('@/views/NotFoundView.vue'),
