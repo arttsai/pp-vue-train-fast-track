@@ -1,12 +1,13 @@
 <template>
     <div>
-        <video ref="videoPlayer" class="video-js"></video>
+        <video :id="options.id" ref="videoPlayer" class="video-js"></video>
     </div>
 </template>
 
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 import videojs from 'video.js'
+import 'video.js/dist/video-js.css'
 
 const props = defineProps({
     options: {
@@ -15,12 +16,14 @@ const props = defineProps({
     }
 })
 
+
+
 const videoPlayer = ref(null)
 let player = null
 
 onMounted(() => {
     player = videojs(videoPlayer.value, props.options, function () {
-        player.log('onPlayerReady')
+        console.log('onPlayerReady')
     })
 })
 
