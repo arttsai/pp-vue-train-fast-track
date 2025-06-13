@@ -125,6 +125,12 @@ const routes = [
     meta: { title: 'Composables 示範' },
   },
   {
+    path: '/modal',
+    name: 'modal',
+    component: () => import('@/views/ModalView.vue'),
+    meta: { title: 'Modal 示範 (對話窗)' },
+  },
+  {
     path: '/:pathMatch(.*)*',
     name: 'NotFound',
     component: () => import('@/views/NotFoundView.vue'),

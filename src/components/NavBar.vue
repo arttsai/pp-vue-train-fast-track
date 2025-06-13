@@ -60,6 +60,9 @@
                         <RouterLink to="/composables" class="navbar-item">
                             Composables 功能 (組合式函數)
                         </RouterLink>
+                        <RouterLink to="/modal" class="navbar-item">
+                            Modal 功能 (對話窗)
+                        </RouterLink>
                     </div>
                 </div>
 
