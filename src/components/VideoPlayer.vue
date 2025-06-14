@@ -9,6 +9,7 @@ import { ref, onMounted, onBeforeUnmount, useTemplateRef } from 'vue'
 import videojs from 'video.js'
 import 'video.js/dist/video-js.css'
 import zhTW from '@/languages/videojs/zh-TW.json'
+import 'videojs-youtube';
 
 videojs.addLanguage('zh-TW', zhTW)
 

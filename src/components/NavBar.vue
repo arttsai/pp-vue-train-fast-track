@@ -38,7 +38,6 @@
                         <RouterLink to="/tabs" class="navbar-item">
                             頁籤功能 (動態元件)
                         </RouterLink>
-
                         <RouterLink to="/tap" class="navbar-item">
                             Tap 功能 (slot, emit)
                         </RouterLink>
@@ -64,7 +63,10 @@
                             Modal 功能 (對話窗)
                         </RouterLink>
                         <RouterLink to="/video" class="navbar-item">
-                            Video 功能 (影片播放)
+                            Video 播放
+                        </RouterLink>
+                        <RouterLink to="/youtube" class="navbar-item">
+                            YouTube 播放
                         </RouterLink>
                     </div>
                 </div>

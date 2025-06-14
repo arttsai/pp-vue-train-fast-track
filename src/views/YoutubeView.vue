@@ -17,8 +17,8 @@ const videoOptions = ref({
   controls: true,
   sources: [
     {
-      src: 'https://videos.pexels.com/video-files/32495488/13857041_640_360_30fps.mp4',
-      type: 'video/mp4'
+      src: 'https://youtu.be/mPy58GQ77cg',
+      type: 'video/youtube'
     }
   ],
   id: 'my-video',
