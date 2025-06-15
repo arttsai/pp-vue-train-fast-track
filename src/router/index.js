@@ -3,6 +3,7 @@ import { useUserStore } from '@/stores/user'
 
 import HomeView from '../views/HomeView.vue'
 import AboutView from '../views/AboutView.vue'
+import { createWebHashHistory } from 'vue-router'
 
 const routes = [
   {
@@ -150,7 +151,7 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes,
 })
 
