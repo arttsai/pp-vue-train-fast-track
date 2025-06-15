@@ -151,7 +151,7 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHashHistory('/pp-vue-train-fast-track/'),
+  history: createWebHistory(),
   routes,
 })
 
