@@ -144,6 +144,12 @@ const routes = [
     meta: { title: 'YouTube 播放器' },
   },
   {
+    path: '/reactive',
+    name: 'reactive',
+    component: () => import('@/views/ReactiveView.vue'),
+    meta: { title: 'Reactive 示範' },
+  },
+  {
     path: '/:pathMatch(.*)*',
     name: 'NotFound',
     component: () => import('@/views/NotFoundView.vue'),

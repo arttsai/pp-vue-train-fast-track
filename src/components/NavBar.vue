@@ -68,6 +68,9 @@
                         <RouterLink to="/youtube" class="navbar-item">
                             YouTube 播放
                         </RouterLink>
+                        <RouterLink to="/reactive" class="navbar-item">
+                            reactive 功能
+                        </RouterLink>
                     </div>
                 </div>
 
