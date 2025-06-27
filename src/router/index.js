@@ -150,6 +150,12 @@ const routes = [
     meta: { title: 'Reactive 示範' },
   },
   {
+    path: '/reactivity',
+    name: 'reactivity',
+    component: () => import('@/views/ReactivityView.vue'),
+    meta: { title: 'Reactivity 示範' },
+  },
+  {
     path: '/:pathMatch(.*)*',
     name: 'NotFound',
     component: () => import('@/views/NotFoundView.vue'),

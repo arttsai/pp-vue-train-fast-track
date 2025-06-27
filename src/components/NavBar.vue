@@ -71,6 +71,9 @@
                         <RouterLink to="/reactive" class="navbar-item">
                             reactive 功能
                         </RouterLink>
+                        <RouterLink to="/reactivity" class="navbar-item">
+                            reactivity 總合分析
+                        </RouterLink>
                     </div>
                 </div>
 
